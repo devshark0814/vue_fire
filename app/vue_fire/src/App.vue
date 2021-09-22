@@ -1,4 +1,5 @@
 <template>
+    <v-app>
     <div>
         <header class="header">
             <router-link to="/" class="header--link">トップ</router-link>
@@ -9,6 +10,7 @@
         </header>
         <router-view></router-view>
     </div>
+    </v-app>
 </template>
 <script>
     export default {

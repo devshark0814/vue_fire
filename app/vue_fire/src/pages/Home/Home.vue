@@ -1,5 +1,11 @@
 <template>
-<div class="container">
-  <h2>Topページです</h2>
-</div>
+    <v-container>
+        <v-row>
+            <v-col>
+                <v-text-field
+                    label="Regular"
+                ></v-text-field>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
