@@ -27,4 +27,6 @@
     </pre>
 1. アプリをデプロイ
     <pre>firebase deploy --only hosting</pre>
+1. firebaseログアウト
+    <pre>firebase logout</pre>
 1. 以上。
