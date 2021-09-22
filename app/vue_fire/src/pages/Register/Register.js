@@ -22,6 +22,9 @@ export default {
                 });
             this.email = "";
             this.password = "";
+        },
+        toLoginPage() {
+            this.$router.push('/login');
         }
     }
 };

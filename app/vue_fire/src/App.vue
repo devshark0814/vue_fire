@@ -1,15 +1,6 @@
 <template>
-    <v-app>
-    <div>
-        <header class="header">
-            <router-link to="/" class="header--link">トップ</router-link>
-            <router-link to="/about" class="header--link" v-if="isLoggedIn">詳細</router-link>
-            <router-link to="/login" class="header--link" v-if="!isLoggedIn">ログイン</router-link>
-            <router-link to="/register" class="header--link" v-if="!isLoggedIn">新規登録</router-link
-            >
-        </header>
+    <v-app style="background-color:#007090">
         <router-view></router-view>
-    </div>
     </v-app>
 </template>
 <script>

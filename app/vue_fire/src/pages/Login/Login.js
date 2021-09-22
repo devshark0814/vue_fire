@@ -26,6 +26,9 @@ export default {
                 });
             this.email = "";
             this.password = "";
+        },
+        toNewAccountPage() {
+            this.$router.push('/register');
         }
     }
 };
