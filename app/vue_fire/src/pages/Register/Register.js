@@ -1,5 +1,8 @@
 import axios from "@/commonJs/axios-for-auth.js"; //axiosのインスタンスをインポート
 export default {
+    props: [
+        'disable'
+    ],
     data() {
         return {
             email: "",
@@ -24,7 +27,7 @@ export default {
             this.password = "";
         },
         toLoginPage() {
-            this.$router.push('/login');
+            this.$emit("registComClose");
         }
     }
 };

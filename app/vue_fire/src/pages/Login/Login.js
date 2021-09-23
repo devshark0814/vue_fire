@@ -1,9 +1,14 @@
 import axios from "@/commonJs/axios-for-auth.js"; //axiosのインスタンスをインポート
+import registerComponent from "@/pages/Register/Register.vue";
 export default {
+    components: {
+        registerComponent
+    },
     data() {
         return {
             email: "",
-            password: ""
+            password: "",
+            registFlag: false,
         };
     },
     methods: {
@@ -28,7 +33,10 @@ export default {
             this.password = "";
         },
         toNewAccountPage() {
-            this.$router.push('/register');
+            this.registFlag = true;
+        },
+        registComClose() {
+            this.registFlag = false;
         }
     }
 };
