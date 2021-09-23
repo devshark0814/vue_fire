@@ -21,6 +21,7 @@
                                 rounded
                                 v-model="password"
                                 label="password"
+                                type="password"
                             />
                         </v-col>
                     </v-row>

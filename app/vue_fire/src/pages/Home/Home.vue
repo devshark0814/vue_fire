@@ -1,11 +1,14 @@
 <template>
     <v-app>
-        <v-navigation-drawer app v-model="drawer" class="navi">
+        <v-navigation-drawer app v-model="drawer">
+            <menu-component />
         </v-navigation-drawer>
 
         <v-app-bar app style="background-color: #007090;">
             <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer">
             </v-app-bar-nav-icon>
+            <v-spacer />
+            <v-btn color="#01a7c2" class="white--text" @click="logout">Logout</v-btn>
         </v-app-bar>
 
         <v-main style="background-color: #e6fbff;">
@@ -22,10 +25,12 @@ export default {
             drawer: true,
         }
     },
+
+    methods:{
+        logout() {
+            this.$store.commit("updateIdToken", null);
+            this.$router.push("/login");
+        }
+    }
 };
 </script>
-<style>
-.navi {
-    background: linear-gradient(to bottom, rgba(2,0,36,1) 0%, rgba(0,112,144,0.9192051820728291) 33%, rgba(255,255,255,1) 98%) !important;
-}
-</style>
