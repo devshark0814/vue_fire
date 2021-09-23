@@ -8,6 +8,8 @@ import vuetify from '@/plugins/vuetify'
 
 Vue.config.productionTip = false
 
+Vue.component('menu-component', require('@/pages/menu/menu.vue').default);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

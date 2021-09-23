@@ -1,11 +1,14 @@
 <template>
-    <v-container>
-        <v-row>
-            <v-col>
-                <v-text-field
-                    label="Regular"
-                ></v-text-field>
-            </v-col>
-        </v-row>
-    </v-container>
+    <div>home</div>
 </template>
+<script>
+export default {
+    data() {
+        return{
+        }
+    },
+
+    methods:{
+    }
+};
+</script>

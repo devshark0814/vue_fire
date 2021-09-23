@@ -6,6 +6,7 @@ import Home from "@/pages/Home/Home.vue";
 import About from "@/pages/About/About.vue";
 import Login from "@/pages/Login/Login.vue";
 import Register from "@/pages/Register/Register.vue";
+import OgaSysBot from "@/pages/OgaSysBot/OgaSysBot.vue";
 
 Vue.use(Router);
 
@@ -39,6 +40,14 @@ export default new Router({
             component: Register,
             beforeEnter(to, from, next) {
                 (store.getters.idToken) ? next("/") : next();
+            }
+        },
+        {
+            path: "/ogaSysBot",
+            name: "OgaSysBot",
+            component: OgaSysBot,
+            beforeEnter(to, from, next) {
+                (store.getters.idToken) ? next() : next("/Login");
             }
         }
     ]

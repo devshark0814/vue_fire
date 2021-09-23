@@ -1,55 +1,59 @@
 <template>
-    <v-card class="login_card">
-        <v-card-text class="login_card_text">
-            <v-container>
-                <v-row>
-                    <v-col>
-                        <span class="black--text">メールアドレス</span>
-                    </v-col>
-                    <v-col>
-                        <v-text-field
-                            solo
-                            v-model="email"
-                        />
-                    </v-col>
-                </v-row>
-                <v-row>
-                    <v-col>
-                        <span class="black--text">パスワード</span>
-                    </v-col>
-                    <v-col>
-                        <v-text-field
-                            solo
-                            v-model="password"
-                        />
-                    </v-col>
-                </v-row>
-                <v-row>
-                    <v-col>
-                        <v-btn color="primary" @click="login">ログイン</v-btn>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-card-text>
-    </v-card>
+    <div>
+        <div class="login_card">
+            <v-card style="background-color:#01A7C2" :elevation="24">
+                <v-card-subtitle class="login_card_title">Login</v-card-subtitle>
+                <v-card-text>
+                    <v-container>
+                        <v-row dense>
+                            <v-col>
+                                <v-text-field
+                                    solo
+                                    rounded
+                                    v-model="email"
+                                    label="e-mail"
+                                />
+                            </v-col>
+                        </v-row>
+                        <v-row dense>
+                            <v-col>
+                                <v-text-field
+                                    solo
+                                    rounded
+                                    v-model="password"
+                                    label="password"
+                                    type="password"
+                                />
+                            </v-col>
+                        </v-row>
+                        <v-row>
+                            <v-col>
+                                <v-btn color="#DD7373" class="white--text" @click="toNewAccountPage" :elevation="6">New Account</v-btn>
+                            </v-col>
+                            <v-spacer />
+                            <v-col style="text-align: right;">
+                                <v-btn color="primary" @click="login" :elevation="6">Login</v-btn>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-card-text>
+            </v-card>
+        </div>
+        <registerComponent ref="registCom" :disable="registFlag" @registComClose="registComClose" />
+    </div>
 </template>
 <script src="./Login.js"></script>
 <style>
-    .login_card {
-        margin: 0 !important;
-        padding: 0 !important;
-        position: relative !important;
-        min-width: 600px !important;
-        min-height: 400px !important;
-        background-color: bisque !important;
-    }
-    .login_card_text {
-        margin: -200px 0 0 -300px !important;
-        position: absolute !important;
-        top: 100% !important;
-        left: 50% !important;
-        width: 600px !important;
-        height: 400px !important;
-        background-color: aqua !important;
-    }
+.login_card {
+    width: 30% !important;
+    left: 37% !important;
+    top: 35% !important;
+    position: absolute !important;
+}
+.login_card_title{
+    text-align: center !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+}
 </style>
